@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tantuni Station - Authentic Mersin Turkish Street Food in Toronto</title>
+
+  <!-- Favicon / Apple Touch Icon -->
+  <link rel="icon" type="image/jpeg" href="img/tantuni-station-logo-small.png">
+  <link rel="apple-touch-icon" href="img/tantuni-station-logo-small.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#d4af37',
+              'gold-hover': '#b89726',
+              'gold-light': '#fdfaf0',
+              red: '#ba1a1a',
+              'red-dark': '#93000a',
+              dark: '#141414',
+              surface: '#fbf9f5',
+              'surface-card': '#ffffff',
+              border: '#ece8df',
+              muted: '#615f5b'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom Smooth Scrolling & Visual Refinements */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    ::selection {
+      background-color: #d4af37;
+      color: #ffffff;
+    }
+
+    .badge-blur {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* Hide scrollbar for category tabs on mobile */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-surface text-brand-dark font-sans antialiased min-h-screen flex flex-col">
+  <!-- TOP ANNOUNCEMENT BANNER -->
+  <div class="bg-brand-dark text-white text-xs sm:text-sm py-2 px-4 border-b border-brand-gold/30">
+    <div
+      class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2 justify-center">
+        <span class="inline-block w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+        <span class="font-medium text-stone-200">Grand Opening Soon in North York! Serving authentic Mersin tantuni
+          rolled fresh on the sac.</span>
+      </div>
+      <div class="flex items-center gap-5 text-stone-300 text-xs">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-brand-gold"></i> 3893 Keele St,
+          North York</span>
+        <span class="hidden md:inline text-stone-600">|</span>
+        <span class="hidden md:flex items-center gap-1.5"><i class="fa-regular fa-clock text-brand-gold"></i> Daily
+          11:00 AM – 10:00 PM</span>
+      </div>
+    </div>
+  </div>
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 bg-brand-surface/95 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo & Title -->
+      <a class="flex items-center gap-3 group" href="#">
+        <img alt="Tantuni Station Logo"
+          class="w-12 h-12 rounded-full border-2 border-brand-gold object-cover shadow-sm group-hover:scale-105 transition-transform duration-300"
+          src="/img/tantuni-station-logo-small.png" />
+        <div>
+          <div
+            class="font-serif font-bold text-xl sm:text-2xl tracking-wider uppercase text-brand-dark flex items-center gap-1.5">
+            Tantuni Station
+          </div>
+          <p class="text-[11px] uppercase tracking-widest text-brand-gold font-semibold -mt-0.5">Authentic Mersin &amp;
+            Turkish Street Food</p>
+        </div>
+      </a>
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-stone-700">
+        <a class="hover:text-brand-gold transition-colors py-1" href="#menu">Menu</a>
+        <a class="hover:text-brand-gold transition-colors py-1" href="#heritage">Our Story &amp; Heritage</a>
+        <a class="hover:text-brand-gold transition-colors py-1" href="#location">Location &amp; Hours</a>
+        <a class="hover:text-brand-gold transition-colors py-1" href="#storefront">Storefront Preview</a>
+        <a class="hover:text-brand-gold transition-colors py-1" href="#links">Quick Links</a>
+      </nav>
+      <!-- Right CTAs -->
+      <div class="hidden sm:flex items-center gap-4">
+        <a class="text-stone-500 hover:text-brand-gold text-lg transition-colors"
+          href="https://instagram.com/tantunistationn" rel="noopener noreferrer" target="_blank" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a class="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-dark text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all active:scale-95"
+          href="tel:+14166301562">
+          <i class="fa-solid fa-phone"></i>
+          <span>Call (416) 630-1562</span>
+        </a>
+      </div>
+      <!-- Mobile Hamburger Button -->
+      <button aria-label="Toggle Navigation Menu"
+        class="lg:hidden p-2 rounded-lg text-stone-700 hover:bg-stone-200/60 focus:outline-none" id="mobileMenuBtn">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+    <!-- Mobile Dropdown Menu -->
+    <div class="hidden lg:hidden bg-brand-surface border-b border-brand-border px-4 pt-2 pb-6 space-y-3"
+      id="mobileMenu">
+      <a class="block py-2 text-stone-800 font-medium hover:text-brand-gold transition-colors border-b border-stone-100"
+        href="#menu">Menu</a>
+      <a class="block py-2 text-stone-800 font-medium hover:text-brand-gold transition-colors border-b border-stone-100"
+        href="#heritage">Our Story &amp; Heritage</a>
+      <a class="block py-2 text-stone-800 font-medium hover:text-brand-gold transition-colors border-b border-stone-100"
+        href="#location">Location &amp; Hours</a>
+      <a class="block py-2 text-stone-800 font-medium hover:text-brand-gold transition-colors border-b border-stone-100"
+        href="#storefront">Storefront Preview</a>
+      <a class="block py-2 text-stone-800 font-medium hover:text-brand-gold transition-colors" href="#links">Quick Links
+        Hub</a>
+      <div class="pt-2">
+        <a class="w-full flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-red-dark text-white text-sm font-semibold py-3 rounded-xl shadow-sm transition-all"
+          href="tel:+14166301562">
+          <i class="fa-solid fa-phone"></i>
+          <span>Call to Order (416) 630-1562</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- QUICK INFO BAR -->
+  <section class="bg-stone-100/70 border-b border-brand-border py-2.5 px-4 text-xs">
+    <div
+      class="max-w-7xl mx-auto flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6 text-stone-600 font-medium">
+      <span class="flex items-center gap-1.5"><i class="fa-solid fa-map-pin text-brand-red"></i> 3893 Keele St, North
+        York, ON</span>
+      <span class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-brand-gold"></i> (416) 630-1562</span>
+      <span class="flex items-center gap-1.5"><i class="fa-brands fa-instagram text-brand-red"></i>
+        @tantunistationn</span>
+      <span class="flex items-center gap-1.5 text-brand-dark font-semibold"><i
+          class="fa-solid fa-fire-flame-curved text-amber-600"></i> Fresh Off The Sac</span>
+      <span class="flex items-center gap-1.5 text-emerald-700 font-semibold ml-auto hidden md:flex"><i
+          class="fa-solid fa-certificate"></i> 100% Halal Verified</span>
+    </div>
+  </section>
+  <!-- HERO SECTION -->
+  <section class="relative py-12 lg:py-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-stone-800 text-xs font-bold uppercase tracking-widest">
+            <span class="w-2 h-2 rounded-full bg-brand-gold"></span> Street Gastronomy of Mersin, Turkey
+          </div>
+          <h1
+            class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark leading-[1.15] tracking-tight">
+            Authentic Mersin Tantuni Arrives in <span class="italic font-normal text-amber-700">North York</span>
+          </h1>
+          <p class="text-stone-600 text-base sm:text-lg max-w-2xl leading-relaxed">
+            Hand-chopped meats, sizzled to perfection on the traditional concave sac, infused with sumac, parsley, ripe
+            tomatoes, and wrapped in warm lavash or crusty somun bread.
+          </p>
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a class="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-dark text-white font-semibold text-sm sm:text-base px-7 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all active:scale-95"
+              href="#menu">
+              <span>Explore Our Full Menu</span>
+              <i class="fa-solid fa-arrow-down text-xs"></i>
+            </a>
+            <a class="inline-flex items-center gap-2 bg-white hover:bg-stone-50 text-stone-800 border border-stone-300 font-semibold text-sm sm:text-base px-6 py-3.5 rounded-full shadow-sm hover:shadow transition-all"
+              href="tel:+14166301562">
+              <i class="fa-solid fa-phone text-brand-gold"></i>
+              <span>Visit Us / Call (416) 630-1562</span>
+            </a>
+          </div>
+          <!-- Feature Badges -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-brand-border max-w-lg">
+            <div>
+              <div class="font-serif font-bold text-2xl text-brand-red">100%</div>
+              <div class="text-xs font-semibold text-stone-500 uppercase tracking-wider">Sac Sizzle Method</div>
+            </div>
+            <div>
+              <div class="font-serif font-bold text-2xl text-stone-900">Fresh</div>
+              <div class="text-xs font-semibold text-stone-500 uppercase tracking-wider">Baked Lavash Daily</div>
+            </div>
+            <div>
+              <div class="font-serif font-bold text-2xl text-brand-gold">Halal</div>
+              <div class="text-xs font-semibold text-stone-500 uppercase tracking-wider">Hand-Cut Prime Cuts</div>
+            </div>
+          </div>
+        </div>
+        <!-- Right Hero Visual Collage -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          <!-- Card 1: Et Tantuni Lavaş -->
+          <div
+            class="relative bg-white rounded-3xl overflow-hidden shadow-lg border border-brand-border group hover:shadow-xl transition-all duration-300">
+            <div class="relative h-64 sm:h-72 overflow-hidden">
+              <img alt="The Mersin Original - Et Tantuni Lavaş"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="assets/03-Et tantuni lavaş.jpeg" />
+              <div class="absolute top-4 left-4">
+                <span
+                  class="bg-brand-dark/90 text-brand-gold text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider badge-blur border border-brand-gold/30">
+                  Signature Sac Roll
+                </span>
+              </div>
+              <div class="absolute bottom-4 right-4">
+                <span
+                  class="bg-brand-red text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow">
+                  Et Tantuni Lavaş
+                </span>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-xl text-brand-dark">The Mersin Original</h3>
+                <span class="text-brand-red font-bold text-lg">$12.50</span>
+              </div>
+              <p class="text-stone-500 text-xs sm:text-sm">Minced beef seared on copper sac with cotton oil, sumac onion
+                &amp; Turkish spices.</p>
+            </div>
+          </div>
+          <!-- Card 2: Yoğurtlu Tantuni -->
+          <div
+            class="relative bg-white rounded-3xl overflow-hidden shadow-md border border-brand-border group hover:shadow-lg transition-all duration-300">
+            <div class="relative h-52 sm:h-60 overflow-hidden">
+              <img alt="Yoğurtlu Tantuni"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="assets/01-Yoğurtlu et tantuni.jpeg" />
+              <div class="absolute top-4 right-4">
+                <span
+                  class="bg-brand-red/90 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider badge-blur">
+                  House Specialty
+                </span>
+              </div>
+            </div>
+            <div class="p-5 flex justify-between items-center">
+              <div>
+                <h4 class="font-serif font-bold text-lg text-brand-dark">Yoğurtlu Tantuni</h4>
+                <p class="text-stone-500 text-xs">Sliced rolls draped in garlic yogurt &amp; warm pepper butter.</p>
+              </div>
+              <span
+                class="bg-amber-100 text-amber-900 font-semibold text-xs px-3 py-1.5 rounded-full whitespace-nowrap">Warm
+                Sizzled Butter</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- STOREFRONT COUNTDOWN / PREVIEW SECTION -->
+  <section class="py-12 bg-stone-100 border-y border-brand-border" id="storefront">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="bg-white rounded-3xl overflow-hidden shadow-sm border border-brand-border grid grid-cols-1 lg:grid-cols-12">
+        <!-- Storefront Photo -->
+        <div class="lg:col-span-6 relative h-72 sm:h-96 lg:h-auto min-h-[300px]">
+          <img alt="Tantuni Station North York Storefront Preview" class="w-full h-full object-cover"
+            src="assets/Tantuni Station - coming soon.jpeg" />
+          <div
+            class="absolute bottom-4 left-4 bg-black/80 text-white text-xs font-medium px-4 py-2 rounded-xl badge-blur border border-white/10">
+            <div class="font-bold text-brand-gold text-[10px] uppercase tracking-wider">Storefront Preview</div>
+            <div>3893 Keele St · North York, Ontario</div>
+          </div>
+        </div>
+        <!-- Storefront Copy & Signup -->
+        <div class="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-center">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-red mb-3">
+            <span class="w-2 h-2 rounded-full bg-brand-red animate-ping"></span> Grand Opening Countdown · North York,
+            ON
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mb-4">
+            Our Station is Getting Ready!
+          </h2>
+          <p class="text-stone-600 text-sm sm:text-base leading-relaxed mb-6">
+            We're putting the finishing touches on our kitchen at <strong class="text-stone-900">3893 Keele St</strong>.
+            Soon you'll experience the sizzling sound, heavenly aroma, and unmatched hospitality of authentic Turkish
+            street food right here in Toronto.
+          </p>
+          <p class="text-stone-500 text-xs sm:text-sm leading-relaxed mb-8">
+            From our custom-crafted concave brass sac pans to hand-stretched Turkish flatbread and cold fresh
+            foam-topped Ayran, every detail is tuned to the timeless Mersin street tradition.
+          </p>
+          <!-- Interactive VIP Invite Form -->
+          <div class="bg-stone-50 p-5 rounded-2xl border border-stone-200">
+            <div class="text-xs font-bold text-stone-700 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+              <i class="fa-solid fa-bell text-brand-gold"></i> Get VIP Opening Day Invite &amp; Tasting Offer
+            </div>
+            <form class="flex flex-col sm:flex-row gap-2" id="notifyForm">
+              <input
+                class="flex-1 px-4 py-3 rounded-xl border border-stone-300 text-sm focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold bg-white"
+                id="notifyEmail" placeholder="Enter your email address" required="" type="email" />
+              <button
+                class="bg-brand-dark hover:bg-black text-white text-sm font-semibold px-6 py-3 rounded-xl transition-colors whitespace-nowrap active:scale-95"
+                type="submit">
+                Notify Me
+              </button>
+            </form>
+            <div class="hidden mt-3 text-xs text-emerald-700 font-semibold flex items-center gap-1.5"
+              id="notifySuccess">
+              <i class="fa-solid fa-check-circle"></i> Teşekkürler! You are on our exclusive VIP tasting list.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- THE STATION MENU SECTION -->
+  <section class="py-16 sm:py-24" id="menu">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <span class="text-xs font-bold text-brand-red uppercase tracking-widest block mb-1">Hand-Crafted On The
+            Sac</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark">The Station Menu</h2>
+          <p class="text-stone-500 text-sm mt-1 max-w-xl">Cooked with authentic Turkish technique: finely minced,
+            delicately pre-boiled, seared with warm cotton oil and Mersin sumac spices, then plated hot.</p>
+        </div>
+        <div class="text-xs font-semibold text-stone-500 flex items-center gap-3">
+          <span class="flex items-center gap-1"><i class="fa-solid fa-circle-check text-emerald-600"></i> 100% Halal
+            Verified</span>
+          <span class="flex items-center gap-1"><i class="fa-solid fa-pepper-hot text-brand-red"></i> Fresh Pickled Hot
+            Peppers Included</span>
+        </div>
+      </div>
+      <!-- Menu Category Tabs Filter -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-10 border-b border-brand-border">
+        <button
+          class="cat-filter-btn px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all whitespace-nowrap bg-brand-dark text-white shadow-sm"
+          data-category="all">
+          All Offerings (19)
+        </button>
+        <button
+          class="cat-filter-btn px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200"
+          data-category="tantuni">
+          Beef &amp; Chicken Tantuni (6)
+        </button>
+        <button
+          class="cat-filter-btn px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200"
+          data-category="veg">
+          Vegetarian Tantuni (2)
+        </button>
+        <button
+          class="cat-filter-btn px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200"
+          data-category="kofte">
+          Köfte (2)
+        </button>
+        <button
+          class="cat-filter-btn px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200"
+          data-category="sides">
+          Sides (2)
+        </button>
+        <button
+          class="cat-filter-btn px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200"
+          data-category="desserts">
+          Desserts (4)
+        </button>
+        <button
+          class="cat-filter-btn px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200"
+          data-category="drinks">
+          Drinks (6)
+        </button>
+      </div>
+      <!-- Menu Grid Items -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="menuGrid">
+        <!-- ITEM 1: Beef Tantuni Lavash -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="tantuni">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Et Tantuni Lavaş"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/03-Et tantuni lavaş.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-brand-dark/90 text-brand-gold text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider badge-blur">Beef</span>
+            <span
+              class="absolute bottom-3 right-3 bg-white/90 text-stone-800 text-[11px] font-semibold px-2.5 py-1 rounded-md badge-blur">Lavaş
+              Wrap</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Beef Tantuni Lavash</h3>
+                <span class="text-brand-red font-extrabold text-base">$12.50</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Et Tantuni Lavaş</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Thinly sliced beef, onion, parsley, tomato, sumac rolled
+                tightly in fresh Turkish lavash.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Extra Beef: +$5.00</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 2: Beef Tantuni Sandwich (Somun) -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="tantuni">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Et Tantuni Somun"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/05-Et tantuni somun.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-brand-dark/90 text-brand-gold text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider badge-blur">Beef</span>
+            <span
+              class="absolute bottom-3 right-3 bg-white/90 text-stone-800 text-[11px] font-semibold px-2.5 py-1 rounded-md badge-blur">Somun
+              Ekmek</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Beef Tantuni Sandwich</h3>
+                <span class="text-brand-red font-extrabold text-base">$12.99</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Et Tantuni Somun</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Thinly sliced beef seared on copper sac served in crusty
+                Turkish sandwich bread.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Extra Beef: +$5.00</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 3: Beef Tantuni with Yogurt -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="tantuni">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Yoğurtlu Et Tantuni"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/01-Yoğurtlu et tantuni.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-brand-red text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">House
+              Special</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Beef Tantuni with Yogurt</h3>
+                <span class="text-brand-red font-extrabold text-base">$15.00</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Yoğurtlu Et Tantuni</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Sliced tantuni roll smothered in rich whipped garlic
+                yogurt and poured with sizzling spiced butter.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Plated with Sumac Onions</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 4: Chicken Tantuni Lavash -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="tantuni">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Tavuk Tantuni Lavaş"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/04-Tavuk tantuni lavaş.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-stone-800 text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider badge-blur">Chicken</span>
+            <span
+              class="absolute bottom-3 right-3 bg-white/90 text-stone-800 text-[11px] font-semibold px-2.5 py-1 rounded-md badge-blur">Lavaş
+              Wrap</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Chicken Tantuni Lavash</h3>
+                <span class="text-brand-red font-extrabold text-base">$12.50</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Tavuk Tantuni Lavaş</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Thinly diced chicken breast, tomatoes, parsley, sumac,
+                and aromatic Turkish seasonings.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Extra Chicken: +$4.00</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 5: Chicken Tantuni Sandwich -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="tantuni">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Tavuk Tantuni Somun"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/06-Tavuk tantuni somun.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-stone-800 text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider badge-blur">Chicken</span>
+            <span
+              class="absolute bottom-3 right-3 bg-white/90 text-stone-800 text-[11px] font-semibold px-2.5 py-1 rounded-md badge-blur">Somun
+              Ekmek</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Chicken Tantuni Sandwich</h3>
+                <span class="text-brand-red font-extrabold text-base">$12.99</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Tavuk Tantuni Somun</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Tender chicken tantuni packed inside fresh toasted
+                crusty somun bread.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Extra Chicken: +$4.00</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 6: Chicken Tantuni with Yogurt -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="tantuni">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Yoğurtlu Tavuk Tantuni"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/02-Yoğurtlu tavuk tantuni.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-stone-800 text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider badge-blur">Chicken</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Chicken Tantuni with Yogurt</h3>
+                <span class="text-brand-red font-extrabold text-base">$15.00</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Yoğurtlu Tavuk Tantuni</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Sliced chicken rolls topped with cold creamy yogurt and
+                warm pepper oil sizzle.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Plated with Fresh Herbs</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 7: Mushroom Tantuni (Vegetarian) -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="veg">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Mushroom Tantuni"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/14-mushroom-tantuni.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Vegetarian</span>
+            <span
+              class="absolute bottom-3 right-3 bg-white/90 text-stone-800 text-[11px] font-semibold px-2.5 py-1 rounded-md badge-blur">Veggie
+              Sac</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Mushroom Tantuni</h3>
+                <span class="text-brand-red font-extrabold text-base">$10.00</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Mantar Tantuni</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Mushrooms, onion, parsley, tomato, sumac seared on the
+                hot sac pan and rolled hot.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-emerald-700 font-semibold text-[11px]">100% Plant-based sizzle</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 8: Cheese Tantuni (Vegetarian) -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="veg">
+          <div class="relative h-56 overflow-hidden bg-stone-100 flex items-center justify-center">
+            <!-- Vegetarian card graphic representation -->
+            <img alt="Cheese Tantuni" class="w-full h-full object-cover filter contrast-125"
+              src="assets/04-Tavuk tantuni lavaş.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Vegetarian</span>
+            <span
+              class="absolute bottom-3 right-3 bg-white/90 text-stone-800 text-[11px] font-semibold px-2.5 py-1 rounded-md badge-blur">Veggie
+              Sac</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Cheese Tantuni</h3>
+                <span class="text-brand-red font-extrabold text-base">$10.00</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Peynirli Tantuni</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Cheese, onion, parsley, tomato, sumac melted and rolled
+                in fresh warm lavash.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Melted warm artisan cheese</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 9: Köfte Plate -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="kofte">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Köfte Porsiyon Plate"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/07-Köfte.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-brand-dark text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Grill
+              Special</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Köfte Plate</h3>
+                <span class="text-brand-red font-extrabold text-base">$20.00</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Porsiyon Köfte</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Grilled Turkish meatballs served with crispy golden
+                fries, charred peppers, and fresh sumac salad.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Extra Köfte: +$4.00</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 10: Köfte Sandwich (Köfte Ekmek) -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="kofte">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Köfte Ekmek" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/08-Köfte ekmek.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-brand-dark text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Street
+              Classic</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Köfte Sandwich</h3>
+                <span class="text-brand-red font-extrabold text-base">$12.99</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Köfte Ekmek</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Grilled meatballs tucked into fresh crusty Turkish bread
+                with sliced tomatoes, sumac onions, and charred pepper.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Extra Köfte: +$4.00</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 11: Red Lentil Soup (Mercimek Çorbası) -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="sides">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Mercimek Çorbası"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/10-Mercimek çorbası.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Hot
+              Starter</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Lentil Soup</h3>
+                <span class="text-brand-red font-extrabold text-base">$10.00</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Mercimek Çorbası</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Traditional comforting Anatolian red lentil soup served
+                hot with lemon wedges and toasted crusty bread.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Served with Fresh Lemon</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 12: Crispy French Fries (Patates Kızartması) -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="sides">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Patates Kızartması"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/09-Patates kızartması.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-stone-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Side</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Fries</h3>
+                <span class="text-brand-red font-extrabold text-base">$7.00</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Patates Kızartması</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Golden crispy fries lightly salted and seasoned, served
+                with ketchup.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Crispy &amp; Freshly Cooked</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 13: Hatay Çıtır Kabak Tatlısı -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="desserts">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Hatay Çıtır Kabak Tatlısı"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/13-Hatay çıtır kabak tatlısı.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-amber-800 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Regional
+              Icon</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Kabak Tatlısı</h3>
+                <span class="text-brand-red font-extrabold text-base">$12.99</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Hatay Çıtır Kabak Tatlısı</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Signature Hatay crispy-outside tender-inside pumpkin
+                dessert glazed with sweet tahini and crushed walnuts.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Drizzled with Tahini</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 14: İncir Tatlısı (Fig Dessert) -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="desserts">
+          <div class="relative h-56 overflow-hidden bg-stone-100 flex items-center justify-center">
+            <img alt="İncir Tatlısı" class="w-full h-full object-cover filter sepia"
+              src="assets/13-Hatay çıtır kabak tatlısı.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-amber-900 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Dessert</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">İncir Tatlısı</h3>
+                <span class="text-brand-red font-extrabold text-base">$12.99</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Traditional Fig Dessert</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Poached Aegean figs stuffed with crushed walnuts in
+                scented light syrup.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Filled with Walnuts</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 15: Künefe -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="desserts">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Künefe" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/12-Künefe.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-brand-gold text-stone-900 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Made
+              to Order</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Künefe</h3>
+                <span class="text-brand-red font-extrabold text-base">$14.99</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Antakya Hatay Künefe</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Crispy spun shredded pastry layered with sweet melted
+                unsalted cheese, soaked in syrup and dusted with Antep pistachio.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Antep Pistachio Topping</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 16: Fırın Sütlaç (Rice Pudding) -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="desserts">
+          <div class="relative h-56 overflow-hidden">
+            <img alt="Fırın Sütlaç" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              src="assets/11-Fırın sütlaç.jpeg" />
+            <span
+              class="absolute top-3 left-3 bg-stone-800 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Clay
+              Pot Baked</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Sütlaç</h3>
+                <span class="text-brand-red font-extrabold text-base">$10.00</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Fırın Sütlaç (Rice Pudding)</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Authentic Turkish oven-baked rice pudding in traditional
+                earthenware bowl with golden caramelized top.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Crushed Hazelnut Garnish</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 17: Ayran Drink -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="drinks">
+          <div class="relative h-56 overflow-hidden bg-rose-50 flex items-center justify-center">
+            <img alt="Turkish Ayran Drink" class="w-full h-full object-contain p-2"
+              src="assets/ayran-drink-canada.jpg" />
+            <span
+              class="absolute top-3 left-3 bg-brand-dark text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Traditional
+              Drink</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Ayran</h3>
+                <span class="text-brand-red font-extrabold text-base">$4.00</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Foamy Yogurt Drink</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Cold, slightly salted churned yogurt drink. The
+                quintessential pairing with hot spicy Mersin tantuni.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Served Ice Cold</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 18: Şalgam Suyu (Turnip Juice) -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="drinks">
+          <div class="relative h-56 overflow-hidden bg-stone-50 flex items-center justify-center">
+            <img alt="Doğanay Şalgam Suyu" class="h-48 object-contain" src="assets/doganay-turnip-juice.jpg" />
+            <span
+              class="absolute top-3 left-3 bg-purple-900 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Mersin
+              Heritage</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Şalgam (Turnip Juice)</h3>
+                <span class="text-brand-red font-extrabold text-base">$3.00</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Doğanay Şalgam Suyu</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Fermented purple turnip &amp; black carrot juice from
+                Southern Turkey. Tangy, savory, and restorative.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Authentic Mersin pairing</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 19: Uludağ Gazoz & Mineral Water -->
+        <div
+          class="menu-item bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col"
+          data-cat="drinks">
+          <div class="relative h-56 overflow-hidden bg-stone-50 flex items-center justify-center gap-2">
+            <img alt="Uludağ Orange Gazoz" class="h-44 object-contain" src="assets/uludag-orange-pop.jpg" />
+            <img alt="Uludağ Mineral Water" class="h-44 object-contain" src="assets/uludag-mineral-water.jpg" />
+            <span
+              class="absolute top-3 left-3 bg-emerald-800 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Imported</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-baseline mb-1">
+                <h3 class="font-serif font-bold text-lg text-brand-dark">Uludağ Drinks &amp; Soda</h3>
+                <span class="text-brand-red font-extrabold text-base">$4.00</span>
+              </div>
+              <p class="text-stone-400 text-xs italic mb-2">Uludağ Gazoz / Maden Suyu</p>
+              <p class="text-stone-600 text-xs leading-relaxed">Imported legendary Turkish sparkling orange pop ($4),
+                mineral water ($4), soft drinks ($3), and bottled water ($1).</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+              <span class="text-[11px]">Soft Drinks $3 · Water $1</span>
+              <button class="add-order-btn text-brand-dark hover:text-brand-red font-semibold p-1"
+                title="Add to Order"><i class="fa-solid fa-plus-circle text-lg"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- THE TANTUNI RITUAL / HERITAGE SECTION -->
+  <section class="py-16 bg-stone-100/60 border-y border-brand-border" id="heritage">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold text-brand-gold uppercase tracking-widest block mb-2">The Anatomy of Mersin
+          Tantuni</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mb-4">The Tantuni Ritual</h2>
+        <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+          Not ordinary shawarma, doner, or kebab. Tantuni is an UNESCO-recognized Turkish culinary heritage preparation
+          built around intense heat, rhythm, speed, and precision.
+        </p>
+      </div>
+      <!-- 4 Pillars Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+          <div>
+            <div
+              class="w-12 h-12 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-brand-dark mb-2">1. The Searing Sac</h3>
+            <p class="text-stone-600 text-xs leading-relaxed">
+              Finely diced prime meat is first simmered, then transferred to the depression of a blistering hot copper
+              sac pan. Light water splashes create plumes of steam that tenderize the meat in seconds.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+          <div>
+            <div
+              class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-700 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-bread-slice"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-brand-dark mb-2">2. Steamed Lavash</h3>
+            <p class="text-stone-600 text-xs leading-relaxed">
+              Thin artisan lavash is pressed directly against the sizzling meat and spices in the pan, absorbing warm
+              vapor, aromatics, and rich savory juices before rolling.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+          <div>
+            <div
+              class="w-12 h-12 rounded-2xl bg-brand-gold/20 text-stone-800 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-brand-dark mb-2">3. Sumac &amp; Pickled Urfa</h3>
+            <p class="text-stone-600 text-xs leading-relaxed">
+              Finely sliced red onions rubbed by hand with tangy sumac, crisp parsley, and ripe summer tomatoes provide
+              the vital cooling crunch against the hot meat.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+          <div>
+            <div
+              class="w-12 h-12 rounded-2xl bg-rose-500/10 text-rose-700 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-glass-water"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-brand-dark mb-2">4. Foamy Ayran &amp; Şalgam</h3>
+            <p class="text-stone-600 text-xs leading-relaxed">
+              Pair your roll with ice-cold churned foam Ayran or spicy fermented purple turnip juice (şalgam suyu)—the
+              exact pairing enjoyed in Mediterranean Mersin harbor stalls.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- LOCATION, MAP & HOURS SECTION -->
+  <section class="py-16 sm:py-20" id="location">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold text-brand-gold uppercase tracking-widest block mb-1">Visit Our North York
+          Counter</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark">Location &amp; Hours</h2>
+        <p class="text-stone-500 text-sm mt-1">Conveniently located at 3893 Keele Street with ample customer plaza
+          parking.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Left: Address & Service Schedule -->
+        <div class="lg:col-span-6 space-y-6">
+          <!-- Address Card -->
+          <div class="bg-white p-6 rounded-3xl border border-brand-border shadow-sm space-y-4">
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center text-xl shrink-0">
+                <i class="fa-solid fa-store"></i>
+              </div>
+              <div>
+                <h3 class="font-serif font-bold text-xl text-brand-dark">Tantuni Station North York</h3>
+                <p class="text-stone-600 text-sm mt-1">3893 Keele St, North York, ON M3J 1N6, Canada</p>
+                <p class="text-stone-400 text-xs mt-0.5">Near Keele &amp; Finch / Sheppard Ave W Corridor</p>
+              </div>
+            </div>
+            <!-- Hours Table -->
+            <div class="bg-stone-50 p-4 rounded-2xl border border-stone-200 text-xs space-y-2">
+              <div
+                class="font-bold text-stone-800 uppercase tracking-wider flex items-center justify-between pb-1 border-b border-stone-200">
+                <span class="flex items-center gap-1.5"><i class="fa-regular fa-clock text-brand-gold"></i> Weekly
+                  Service Hours</span>
+                <span class="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full font-semibold">Open Daily</span>
+              </div>
+              <div class="flex justify-between text-stone-700 pt-1">
+                <span>Monday – Friday:</span>
+                <strong class="font-semibold text-stone-900">11:00 AM – 10:00 PM</strong>
+              </div>
+              <div class="flex justify-between text-stone-700">
+                <span>Saturday:</span>
+                <strong class="font-semibold text-stone-900">11:00 AM – 10:00 PM</strong>
+              </div>
+              <div class="flex justify-between text-stone-700">
+                <span>Sunday:</span>
+                <strong class="font-semibold text-stone-900">11:00 AM – 10:00 PM</strong>
+              </div>
+            </div>
+            <!-- Action buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-1">
+              <a class="flex items-center justify-center gap-2 bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-bold py-3 rounded-xl transition-all"
+                href="tel:+14166301562">
+                <i class="fa-solid fa-phone text-brand-red"></i>
+                <span>(416) 630-1562</span>
+              </a>
+              <a class="flex items-center justify-center gap-2 bg-brand-dark hover:bg-black text-white text-xs font-bold py-3 rounded-xl transition-all"
+                href="https://maps.google.com/?q=3893+Keele+St+%239,+North+York,+ON+M3J+1N6" rel="noopener noreferrer"
+                target="_blank">
+                <i class="fa-solid fa-location-arrow text-brand-gold"></i>
+                <span>Get Directions</span>
+              </a>
+            </div>
+          </div>
+          <!-- Social Feed Preview / Instagram -->
+          <div class="bg-white p-6 rounded-3xl border border-brand-border shadow-sm">
+            <div class="flex justify-between items-center mb-4">
+              <div class="flex items-center gap-2 font-serif font-bold text-lg text-brand-dark">
+                <i class="fa-brands fa-instagram text-brand-red text-xl"></i>
+                <span>Follow the Sizzle</span>
+              </div>
+              <a class="text-xs font-bold text-brand-gold hover:underline" href="https://instagram.com/tantunistationn"
+                rel="noopener noreferrer" target="_blank">@tantunistation</a>
+            </div>
+            <p class="text-stone-500 text-xs mb-4">Follow our journey from renovation to opening day in North York. Tag
+              your rolls with #TantuniStationTO for tasting features!</p>
+            <div class="grid grid-cols-3 gap-2 rounded-2xl overflow-hidden">
+              <img alt="Tantuni Roll" class="w-full h-24 object-cover hover:opacity-90 transition-opacity"
+                src="assets/03-Et tantuni lavaş.jpeg" />
+              <img alt="Sütlaç" class="w-full h-24 object-cover hover:opacity-90 transition-opacity"
+                src="assets/11-Fırın sütlaç.jpeg" />
+              <img alt="Köfte Plate" class="w-full h-24 object-cover hover:opacity-90 transition-opacity"
+                src="assets/07-Köfte.jpeg" />
+            </div>
+          </div>
+        </div>
+        <!-- Right: Interactive Google Map Embed Frame -->
+        <div class="lg:col-span-6">
+          <div
+            class="bg-white p-3 rounded-3xl border border-brand-border shadow-sm overflow-hidden flex flex-col h-full">
+            <div class="relative w-full h-[380px] sm:h-[450px] rounded-2xl overflow-hidden bg-stone-200">
+              <iframe allowfullscreen="" class="w-full h-full" height="100%" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.261050201625!2d-79.49755492348574!3d43.74669897109789!2m3!1f0!2f0!3f0!32m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31f79f42fbab%3A0xc07a829e2f5f14dc!2s3893%20Keele%20St%2C%20North%20York%2C%20ON%20M3J%201N6%2C%20Canada!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                style="border:0;" title="Tantuni Station Location Map" width="100%"></iframe>
+              <div
+                class="absolute bottom-4 left-4 right-4 bg-white/95 p-3 rounded-xl badge-blur shadow border border-stone-200 flex items-center justify-between text-xs">
+                <div>
+                  <div class="font-bold text-stone-900">3893 Keele St, North York</div>
+                  <div class="text-stone-500">Free plaza parking available right out front</div>
+                </div>
+                <a class="bg-brand-red text-white font-bold px-3 py-1.5 rounded-lg whitespace-nowrap"
+                  href="https://maps.google.com/?q=3893+Keele+St+%239,+North+York,+ON+M3J+1N6" rel="noopener noreferrer"
+                  target="_blank">
+                  Open Map
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- BOTTOM CALL-TO-ACTION BAR -->
+  <section class="bg-brand-red text-white py-8 px-4">
+    <div
+      class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div>
+        <h3 class="font-serif font-bold text-2xl sm:text-3xl text-white">Ready to taste Mersin in Toronto?</h3>
+        <p class="text-rose-100 text-sm mt-1">Join our community preview list or reach out directly to reserve catering
+          trays.</p>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <a class="bg-brand-dark hover:bg-black text-white font-semibold text-sm px-6 py-3 rounded-full transition-all"
+          href="tel:+14166301562">
+          Call (416) 630-1562
+        </a>
+        <a class="bg-white hover:bg-stone-100 text-brand-dark font-semibold text-sm px-6 py-3 rounded-full transition-all"
+          href="https://instagram.com/tantunistationn" rel="noopener noreferrer" target="_blank">
+          DM on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- MASTER SITE FOOTER -->
+  <footer class="bg-[#111111] text-stone-300 py-16 border-t border-brand-gold/20" id="links">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-stone-800">
+        <!-- Brand Summary -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <img alt="Tantuni Station" class="w-10 h-10 rounded-full border border-brand-gold object-cover"
+              src="assets/tantuni-station-logo.jpeg" />
+            <span class="font-serif font-bold text-xl text-white tracking-wider">TANTUNI STATION</span>
+          </div>
+          <p class="text-stone-400 text-xs leading-relaxed">
+            Bringing Mersin’s authentic street gastronomy to Toronto. Tender braised meat seasoned with red sumac and
+            warm spices, sizzled on circular brass sac pans and rolled hot in hand-stretched lavas.
+          </p>
+          <div class="text-xs text-brand-gold font-semibold flex items-center gap-1.5">
+            <i class="fa-solid fa-award"></i>
+            <span>100% Authentic Mersin Recipe · Halal Hand-Cut</span>
+          </div>
+        </div>
+        <!-- Location & Contact Details -->
+        <div>
+          <h4 class="font-serif font-bold text-white text-sm uppercase tracking-wider mb-4">Location &amp; Contact</h4>
+          <ul class="space-y-2.5 text-xs text-stone-400">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-brand-gold shrink-0 mt-0.5"></i>
+              <span>3893 Keele St, North York, ON M3J 1N6, Canada</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-brand-gold shrink-0"></i>
+              <a class="hover:text-white transition-colors" href="tel:+14166301562">(416) 630-1562</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-brand-gold shrink-0"></i>
+              <a class="hover:text-white transition-colors"
+                href="mailto:info@tantunistation.com">info@tantunistation.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-instagram text-brand-gold shrink-0"></i>
+              <a class="hover:text-white transition-colors" href="https://instagram.com/tantunistationn"
+                rel="noopener noreferrer" target="_blank">@tantunistationn</a>
+            </li>
+            <li class="pt-1">
+              <a class="text-brand-gold hover:underline font-semibold flex items-center gap-1"
+                href="https://maps.google.com/?q=3893+Keele+St+%239,+North+York,+ON+M3J+1N6" rel="noopener noreferrer"
+                target="_blank">
+                <span>View on Google Maps</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Hours & Dining Options -->
+        <div>
+          <h4 class="font-serif font-bold text-white text-sm uppercase tracking-wider mb-4">Hours &amp; Service</h4>
+          <ul class="space-y-2 text-xs text-stone-400">
+            <li class="flex justify-between border-b border-stone-800/80 pb-1">
+              <span>Monday – Sunday:</span>
+              <strong class="text-stone-200">11:00 AM – 10:00 PM</strong>
+            </li>
+            <li class="pt-2 text-stone-400">
+              <strong class="text-white block mb-1">Dining Options:</strong>
+              Dine-In, Fresh Takeout &amp; Sac-Side Counter
+            </li>
+            <li class="pt-2 text-stone-400">
+              <strong class="text-white block mb-1">Large Orders &amp; Catering:</strong>
+              Event &amp; corporate tray bookings available
+            </li>
+          </ul>
+        </div>
+        <!-- Quick Links Hub -->
+        <div>
+          <h4 class="font-serif font-bold text-white text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs text-stone-400">
+            <li><a class="hover:text-brand-gold transition-colors flex items-center gap-1.5" href="#menu"><i
+                  class="fa-solid fa-angle-right text-[10px]"></i> The Sac Menu</a></li>
+            <li><a class="hover:text-brand-gold transition-colors flex items-center gap-1.5" href="#heritage"><i
+                  class="fa-solid fa-angle-right text-[10px]"></i> Mersin Heritage &amp; Technique</a></li>
+            <li><a class="hover:text-brand-gold transition-colors flex items-center gap-1.5" href="#storefront"><i
+                  class="fa-solid fa-angle-right text-[10px]"></i> Storefront &amp; Opening News</a></li>
+            <li><a class="hover:text-brand-gold transition-colors flex items-center gap-1.5"
+                href="https://tantunistation.com/links" target="_blank"><i
+                  class="fa-solid fa-angle-right text-[10px]"></i> Mobile Quick Links &amp; QR Hub</a></li>
+            <li><a class="hover:text-brand-gold transition-colors flex items-center gap-1.5" href="#location"><i
+                  class="fa-solid fa-angle-right text-[10px]"></i> Inquiries &amp; Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bottom Disclaimer / Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-stone-500 gap-4">
+        <p>© <span id="year">2025</span> Tantuni Station Toronto. Rolled with authentic Turkish culinary pride.</p>
+        <div class="flex items-center gap-4 text-[11px]">
+          <span>Crafted for true street food lovers</span>
+          <span>·</span>
+          <span>Keele St &amp; Sheppard Ave</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FLOATING ONE-TAP CALL BUTTON (MOBILE ONLY) -->
+  <aside aria-label="Quick Actions" class="sm:hidden fixed bottom-4 right-4 z-40">
+    <a class="w-14 h-14 rounded-full bg-brand-red text-white flex items-center justify-center text-2xl shadow-xl border-2 border-white/50 active:scale-95 transition-transform"
+      href="tel:+14166301562">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </aside>
+  <!-- JAVASCRIPT: Dynamic Filter, Mobile Nav & VIP Form -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Current Year
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // 2. Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+        // Close menu upon navigation click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+      }
+
+      // 3. Category Filter Tabs
+      const filterButtons = document.querySelectorAll('.cat-filter-btn');
+      const menuItems = document.querySelectorAll('.menu-item');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Reset styles
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-brand-dark', 'text-white', 'shadow-sm');
+            b.classList.add('bg-white', 'text-stone-600', 'border', 'border-stone-200');
+          });
+
+          // Activate clicked button
+          btn.classList.add('bg-brand-dark', 'text-white', 'shadow-sm');
+          btn.classList.remove('bg-white', 'text-stone-600', 'border', 'border-stone-200');
+
+          const selectedCategory = btn.getAttribute('data-category');
+
+          menuItems.forEach(item => {
+            const itemCat = item.getAttribute('data-cat');
+            if (selectedCategory === 'all' || itemCat === selectedCategory) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 4. Notify Form Handler
+      const notifyForm = document.getElementById('notifyForm');
+      const notifySuccess = document.getElementById('notifySuccess');
+      const notifyEmail = document.getElementById('notifyEmail');
+
+      if (notifyForm && notifySuccess && notifyEmail) {
+        notifyForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (notifyEmail.value.trim()) {
+            notifySuccess.classList.remove('hidden');
+            notifyEmail.value = '';
+            setTimeout(() => {
+              notifySuccess.classList.add('hidden');
+            }, 6000);
+          }
+        });
+      }
+
+      // 5. Add to Order interactive micro-interaction
+      const addBtns = document.querySelectorAll('.add-order-btn');
+      addBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const icon = btn.querySelector('i');
+          if (icon) {
+            icon.className = 'fa-solid fa-circle-check text-emerald-600 text-lg';
+            setTimeout(() => {
+              icon.className = 'fa-solid fa-plus-circle text-lg';
+            }, 1500);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
