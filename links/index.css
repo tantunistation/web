@@ -455,3 +455,7 @@
     .floating-whatsapp:active {
         transform: scale(0.9);
     }
+
+    .text-brand-red {
+        color: #ff0000;
+    }
